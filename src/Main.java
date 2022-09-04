@@ -48,7 +48,7 @@ public class Main extends JFrame {
 	public static JLabel[] labels;
 	public static PlayComponent[] playComponents;
 	
-	public static final File INI = new File(System.getProperty("user.home")+"\\Desktop\\mest.txt");
+	public static final File INI = new File("mest.txt");
 
 	public static void initialize() {
 		groups = new LinkedList<>();
@@ -71,7 +71,7 @@ public class Main extends JFrame {
 			
 			rowHeight = (dm.height/2) / groups.size();
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "Ошибка инициализации: " + e.getMessage());
+			JOptionPane.showMessageDialog(null, "ГЋГёГЁГЎГЄГ  ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГЁ: " + e.getMessage());
 		}
 		
 		
@@ -81,7 +81,7 @@ public class Main extends JFrame {
 		if(groups.contains(group)) {
 			components.put(title, group);
 		} else {
-			throw new IllegalArgumentException("Несуществующая группа ответа " + group);
+			throw new IllegalArgumentException("ГЌГҐГ±ГіГ№ГҐГ±ГІГўГіГѕГ№Г Гї ГЈГ°ГіГЇГЇГ  Г®ГІГўГҐГІГ  " + group);
 		}
 	}
 	public static void main(String[] args) {
@@ -128,7 +128,7 @@ public class Main extends JFrame {
 		}
 		
 		JButton btn = new JButton();
-		btn.setText("Проверить!");
+		btn.setText("ГЏГ°Г®ГўГҐГ°ГЁГІГј!");
 		btn.setFont(new Font("arial", 0, Math.min(rowHeight - 10, FS)));
 		btn.addActionListener(new ActionListener() {
 			@Override
@@ -146,7 +146,7 @@ public class Main extends JFrame {
 					
 					if(rightAnswer.equals(answer)) {
 						pc.setColor(Color.GREEN);
-						System.out.println("я поменял цвет " + pc.getTitle() + " на зелёный");
+						System.out.println("Гї ГЇГ®Г¬ГҐГ­ГїГ« Г¶ГўГҐГІ " + pc.getTitle() + " Г­Г  Г§ГҐГ«ВёГ­Г»Г©");
 					} else {
 						pc.setColor(Color.RED);
 					}
